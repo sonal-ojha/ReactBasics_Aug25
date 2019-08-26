@@ -54,10 +54,10 @@ class Counter extends React.Component {
     }
 
     handleClickCountDecrement = () => {
-        // if (this.state.count === 0) return;
-        // this.setState({
-        //     count: this.state.count - 1,
-        // });
+        if (this.state.count === 0) return;
+        this.setState({
+            count: this.state.count - 1,
+        });
 
         const { count } = this.state;
         if (count === 0) return;
@@ -65,6 +65,20 @@ class Counter extends React.Component {
             count: count - 1,
         });
     }
+
+    // LINE 15: TO be used when the handler is written in below Format - Explicity Bind the Function
+    // handleClickCountDecrement() {
+    //     if (this.state.count === 0) return;
+    //     this.setState({
+    //         count: this.state.count - 1,
+    //     });
+
+    //     const { count } = this.state;
+    //     if (count === 0) return;
+    //     this.setState({
+    //         count: count - 1,
+    //     });
+    // }
 
     handleInputText = (e) => {
         this.setState({

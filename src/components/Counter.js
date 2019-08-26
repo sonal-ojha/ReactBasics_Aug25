@@ -1,5 +1,5 @@
 import React from 'react';
-import { imgNano } from '../cars_images/nano.png';
+import nano  from '../cars_images/nano.png';
 
 class Counter extends React.Component {
     // Initial Mount phase
@@ -105,7 +105,13 @@ class Counter extends React.Component {
                     <button onClick={handleHideImage}>
                         HIDE
                     </button>
-                    {displayImage && <img src={imgNano} alt="nano" /> }
+                    <div style={{
+                        width: '100px',
+                        height: '100px',
+                        marginLeft: '45%',
+                    }}>
+                        {displayImage && <img src={nano} alt="nano" style={{ width: '100%', height: '100%' }} /> }
+                    </div>
                 </div>
             </div>
         )
